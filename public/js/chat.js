@@ -1,4 +1,4 @@
-const socket = io()
+const socket = io();
 
 // Elements
 const $messageForm = document.querySelector('#message-form');
@@ -45,7 +45,7 @@ const autoscroll = () => {
 }
 
 socket.on('message', (mesg) => {
-    console.log(mesg);
+
     const html = Mustache.render(messageTemplate, {
         username: mesg.username,
         message: mesg.text,

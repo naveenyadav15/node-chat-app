@@ -1,7 +1,17 @@
+const emoji = require('node-emoji');
+
 const generateMessage = (username, text) => {
+
+    var me = text;
+    me = me.replace(':)', ':smile:');
+    me = me.replace(':(', ':disappointed:');
+    me = me.replace(':|', ':expressionless:');
+    me = emoji.emojify(me);
+    // text = emoji.random();
+    // console.log(text)
     return {
         username,
-        text,
+        text: me,
         createdAt: new Date().getTime()
     }
 }

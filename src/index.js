@@ -3,6 +3,7 @@ const http = require('http');
 const socketio = require('socket.io');
 const path = require('path');
 const Filter = require('bad-words');
+const emoji = require('node-emoji');
 const {
     generateMessage,
     generateLocationMessage
